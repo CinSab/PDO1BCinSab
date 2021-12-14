@@ -32,21 +32,18 @@ public class Materia{
         }
         return todys;
     }
+     public void agregarAlumno(int cantAlumnos, List<Alumno> alumnos){
+            for (int i = 0; i < cantAlumnos; i++) {
+                Random numGenerator = new Random();
+                numGenerator.ints();
+                int Num = (int)(Math.random() * 100);
+                int dni = (int)(Math.random() * 1000);
+                String name = ("nombreGenerico" + Num);
+                Num = (int)(Math.random() * 100); // edad
+                Alumno aux = new Alumno(name, Num, dni);
 
-    public void agregarAlumno(int cantAlumnos){
-        Scanner in = new Scanner(System.in);
-        //this.getListaAlumnos().add(alumno);
-        for (int i = 0; i < cantAlumnos; i++) {
-            System.out.println("Alumno " + (i + 1) + ": ");
-            System.out.println("Ingrese nombre: ");
-            String nombreAlumno = in.next();
-            System.out.println("Ingrese edad: ");
-            int edadAlumno = in.nextInt();
-            System.out.println("Ingrese DNI: ");
-            int dniAlumno = in.nextInt();
-
-            this.listaAlumnos.add(new Alumno(nombreAlumno, edadAlumno, dniAlumno));
+                alumnos.add(aux);
+            }
         }
-    }
 
 }
