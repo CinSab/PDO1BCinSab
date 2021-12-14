@@ -8,7 +8,7 @@ public class Main {
         ColaDeBanco colaDeBanco = new ColaDeBanco();
         colaDeBanco.generadorDePersonas(Num);
         System.out.println(colaDeBanco.colaDePersonas);
-        colaDeBanco.atender();
+        System.out.println(colaDeBanco.atender());
         System.out.println(colaDeBanco.colaDePersonas);
     }
 }
