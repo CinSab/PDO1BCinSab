@@ -1,24 +1,22 @@
-public class Main {
-   public static void main(String[] args) {
+package personas;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+    public class Main {
+        public static void main(String[] args) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("==================++++++++++++++++===============+++++++++++++++++==========");
 
-       Auto auto1 = new Auto();
-       auto1.setMarca("Fiat");
-       auto1.setName("Toro Volcano");
-       auto1.setTipo("nafta");
-       auto1.setPuertas(5);
-       auto1.setRuedas(4);
-       auto1.setCombustible(50f);
+            System.out.println("Ingrese la cantidad de alumnos que se anotaron: ");
+            int cantAlumnos = in.nextInt();
 
-       Moto moto1 = new Moto();
-       moto1.setMarca("Zanella");
-       moto1.setName("rx 150");
-       moto1.setCilindrada(150);
-       moto1.setRuedas(2);
-       moto1.setCombustible(30f);
+            Docente bodoque = new Docente("Juan Carlos Bodoque", 34, 124543);
+            List<Alumno> alumnos = new ArrayList<>();
 
-       auto1.consultarCombustible();
-       auto1.acelerar();
-       auto1.agregarCombustible(50.2f);
-
-   }
-}
+            Materia materia1 = new Materia("Paradigmas", bodoque);
+            materia1.setListaAlumnos(alumnos);
+            materia1.agregarAlumno(cantAlumnos);
+            materia1.datosMateria();
+            System.out.println(materia1.listaCompleta());
+        }
+    }
