@@ -10,7 +10,7 @@ public class Par implements Conjunto{
 
     @Override
     public boolean pertenece(Object o) {
-       return o instanceof Integer && isPar(num1);
+       return o instanceof Integer && (isPar((Integer) o));
     }
     // Una que devuelve true si el objeto es un numero (usando instanceof Integer) y es un numero par.
 
